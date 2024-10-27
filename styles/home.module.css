@@ -2,8 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Rubik+Vinyl&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Vinyl&display=swap');
 
-.body{
+.container{
     height: 2000px;
+    background-color: rgb(0, 0, 0);
 }
 
 .head{
@@ -34,8 +35,8 @@
 
 
 .head_btn_1, .head_btn_2, .head_btn_3{
-    width: 70px;
-    height: 50px;
+    width: 60px;
+    height: 40px;
     margin-left: 10px;
     margin-right: 10px;
     background-color: #ff5757;
@@ -44,7 +45,7 @@
     border-color: transparent;
     border-width: 2px;
     border-style: solid;
-    box-shadow: 5px 5px 10px  rgba(0, 0, 0, 0.5); 
+    box-shadow: 4px 4px 1px  rgb(255, 255, 255); 
     transition: box-shadow 0.5s ease-in-out;
 }
 
@@ -54,21 +55,21 @@
 
 .logo_discord{
     margin-top: 5px;
-    width: 35px;
-    height: 25px;
+    width: 30px;
+    height: 20px;
     
 }
 
 .logo_telegram{
     margin-top: 5px;
-    width: 35px;
-    height: 25px;
+    width: 30px;
+    height: 20px;
 }
 
 .logo_instagram{
     margin-top: 5px;
-    width: 30px;
-    height: 25px;
+    width: 25px;
+    height: 20px;
 }
 
 
@@ -90,6 +91,7 @@
     margin-top: 200px;
     width: 250px;
     height: auto;
+    overflow-x: hidden;
   }
 
 .card1_{
@@ -106,10 +108,12 @@
 
 .form_div{
     width: 100%;
+    height: 400px;
     display: grid;
     place-items: center;
     justify-content: center;
     align-items: center;
+    overflow-x: hidden;
 }
   
 .form_title{
@@ -118,6 +122,8 @@
   font-style: normal;
   color: #ff5757;
   margin-bottom: 0px;
+  padding: 0;
+  
 }
 
 .form_subtitle{
@@ -125,7 +131,8 @@
   font-weight: 500;
   font-style: normal;
   color: #ff5757;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
+  margin-top: 0px;
 }
 
 .form{
@@ -158,13 +165,14 @@
 .submit_btn{
     width: 350px;
     height: 40px;
+    margin-top: 10px;
     background-color: #ff5757;
     cursor: pointer;
     border-radius: 20px;
     border-color: transparent;
     border-width: 2px;
     border-style: solid;
-    box-shadow: 5px 5px 10px  rgba(0, 0, 0, 0.5); 
+    box-shadow: 5px 5px 0px  rgb(255, 255, 255); 
     transition: box-shadow 0.5s ease-in-out;
     font-family: "Roboto", sans-serif;
   font-weight: 500;
@@ -173,4 +181,216 @@
 
 .submit_btn:hover{
     box-shadow: 1px 1px 1px; 
+}
+
+@media (max-width: 830px) {
+
+    .cards_div {
+      width: 70%;
+    }
+      
+    .card1_, .card2_, .card3_{
+        margin-top: 200px;
+        width: 170px;
+    }
+
+    .card1_{
+        margin-left: 500px;
+    }
+    
+    .card2_{
+        margin-left: 250px;
+    }
+    
+    .card3_{
+        margin-right: 5px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+
+    .head{
+        display: grid;
+        place-items: center;
+        justify-content: center;
+    }
+
+    .head_div_1{
+        margin-left: 0px;
+        margin-top: 30px;
+    }
+    
+    .head_div_2{
+        margin-right: 0px;
+        margin-top: 20px;
+    }
+
+    .head_btn_1, .head_btn_2, .head_btn_3{
+        width: 60px;
+        height: 40px;
+    }
+
+    .logo_discord, .logo_telegram{
+        width: 30px;
+        height: 20px;
+    }
+
+    .logo_instagram{
+        width: 25px;
+        height: 20px;
+    }
+
+    .cards_div {
+      width: 60%;
+    }
+      
+    .card1_, .card2_, .card3_{
+        margin-top: 200px;
+        width: 150px;
+    }
+
+    .card1_{
+        margin-left: 500px;
+    }
+    
+    .card2_{
+        margin-left: 250px;
+    }
+    
+    .card3_{
+        margin-right: 5px;
+    }
+}
+
+@media (max-width: 530px) {
+
+
+
+    .head_btn_1, .head_btn_2, .head_btn_3{
+        width: 50px;
+        height: 30px;
+    }
+
+    .logo_discord, .logo_telegram{
+        width: 25px;
+        height: 15px;
+    }
+
+    .logo_instagram{
+        width: 20px;
+        height: 15px;
+    }
+
+    .cards_div {
+      width: 60%;
+    }
+      
+    .card1_, .card2_, .card3_{
+        margin-top: 200px;
+        width: 120px;
+    }
+
+    .card1_{
+        margin-left: 400px;
+    }
+    
+    .card2_{
+        margin-left: 195px;
+    }
+    
+    .card3_{
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 420px) {
+    
+
+    .card1_, .card2_, .card3_{
+        margin-top: 200px;
+        width: 100px;
+    }
+
+    .card1_{
+        margin-left: 320px;
+    }
+    
+    .card2_{
+        margin-left: 160px;
+    }
+    
+    .card3_{
+        margin-right: 5px;
+    }
+
+    .form_title{
+      font-size: 25px;
+    }
+
+    .form_name{
+        width: 270px;
+        height: 40px;
+    }
+    
+    .form_email{
+        width: 270px;
+        height: 40px;
+    }
+    
+    .submit_btn{
+        margin-top: 20px;
+        width: 200px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 340px) {
+
+    .card1_, .card2_, .card3_{
+        margin-top: 200px;
+        width: 70px;
+    }
+
+    .cards_div {
+        width: 50%;
+      }
+
+    .card1_{
+        margin-left: 290px;
+    }
+    
+    .card2_{
+        margin-left: 160px;
+    }
+    
+    .card3_{
+        margin-right: 5px;
+        margin-left: 30px;
+    }
+
+    .form_title{
+      font-size: 20px;
+    }
+
+    .form_subtitle{
+        font-size: 15px;
+    }
+
+    .form_name{
+        width: 250px;
+        height: 40px;
+    }
+    
+    .form_email{
+        width: 250px;
+        height: 40px;
+    }
+    
+    .submit_btn{
+        margin-top: 20px;
+        width: 200px;
+        height: 40px;
+    }
 }

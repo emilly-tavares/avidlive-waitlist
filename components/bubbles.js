@@ -11,7 +11,7 @@ const Bubbles = () => {
 
     const container = document.getElementById('bubble-container');
     const color1 = '#ff5757'; 
-    const color2 = '#000000'; 
+    const color2 = '#FFFFFF'; 
 
     for (let i = 0; i < bubbleCount; i++) {
       const bubble = document.createElement('div');
