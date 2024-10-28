@@ -59,7 +59,7 @@ function Home(){
 
     const card1_style = {
         position: 'absolute',
-        top: isFixed ? '1300px' : `${Math.min(scrollPos * 0.4 + 100, 500)}px`, 
+        top: isFixed ? '1600px' : `${Math.min(scrollPos * 0.4 + 100, 500)}px`, 
         transform: `
         rotate(${Math.max(-20, -20 - scrollPos * 0.5)}deg) 
         scaleX(${Math.max(0.85, 1 - scrollPos * 0.001)}) 
@@ -74,7 +74,7 @@ function Home(){
     const card2_style = {
 
         position: 'absolute',
-        top: isFixed ? '1200px' : `${Math.min(scrollPos * 0.4 + 100, 300)}px`, 
+        top: isFixed ? '1600px' : `${Math.min(scrollPos * 0.4 + 100, 300)}px`, 
         transform: `
         rotate(${Math.max(0, -10 - scrollPos * 0.1)}deg)
         scaleX(${Math.max(0.7, 1 - scrollPos * 0.001)}) 
@@ -89,7 +89,7 @@ function Home(){
     const card3_style = {
 
         position: 'absolute',
-        top: isFixed ? '1300px' : `${Math.min(scrollPos * 0.4 + 100, 300)}px`, 
+        top: isFixed ? '1600px' : `${Math.min(scrollPos * 0.4 + 100, 300)}px`, 
         transform: `
         rotate(${Math.max(-15, -12 - scrollPos * 0.1)}deg)
         scaleX(${Math.max(0.7, 1 - scrollPos * 0.001)}) 
@@ -103,7 +103,7 @@ function Home(){
     const card4_style = {
 
         position: 'absolute',
-        top: isFixed ? '1300px' : `${Math.min(scrollPos * 0.4 + 100, 300)}px`, 
+        top: isFixed ? '1700px' : `${Math.min(scrollPos * 0.4 + 100, 300)}px`, 
         transform: `
         rotate(${Math.max(5, 10 - scrollPos * 0.1)}deg)
         scaleX(${Math.max(0.9, 1 - scrollPos * 0.001)}) 
@@ -148,15 +148,17 @@ function Home(){
             </div>
 
             <div className={styles.form_div}>
+                <div className={styles.form_texts_div}>
+                    <h1 className={styles.form_title}> SKIP THE FOMO <br></br> GET ON THE LIST! </h1>
+                    <h3 className={styles.form_subtitle}> YOUR FEED’S NEVER SEEN THIS BEFORE. <br></br> DROP YOUR EMAIL TO BE PART OF THE NEXT <br></br> BIG THING, NO CAP. </h3>
 
-                <h1 className={styles.form_title}> MAKE THE DIFFERENCE </h1>
-                <h3 className={styles.form_subtitle}> JOIN OUR WAITLIST </h3>
+                </div>
                 
                 <form onSubmit={handleSubmit} className={styles.form}>
                     <input
                         className={styles.form_name}
                         type="text"
-                        placeholder="👤  Name"
+                        placeholder="👤 Full Name"
                         value={name}
                         onChange={(e) => setName(e.target.value)}
                         required
