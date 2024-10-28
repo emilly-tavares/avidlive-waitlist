@@ -10,7 +10,7 @@ const Bubbles = () => {
     if (bubblesCreated.current) return; 
 
     const container = document.getElementById('bubble-container');
-    const color1 = '#ff5757'; 
+    const color1 = '#1cf252'; 
     const color2 = '#FFFFFF'; 
 
     for (let i = 0; i < bubbleCount; i++) {

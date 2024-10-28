@@ -5,10 +5,12 @@ import styles from '../styles/home.module.css';
 import logoDiscord from '../images/discord-logo.png';
 import logoTelegram from '../images/telegram-logo.png';
 import logoInstagram from '../images/instagram-logo.png';
-import card1 from '../images/avidlive-card-1.png';
-import card2 from '../images/avidlive-card-2.png';
-import card3 from '../images/avidlive-card-3.png';
+import card1 from '../images/card1.png';
+import card2 from '../images/card2.png';
+import card3 from '../images/card3.png';
+import card4 from '../images/card4.png';
 import Bubbles from '../components/bubbles.js';
+import bottom_img from '../images/bottom-img.png';
 
 function Home(){
 
@@ -57,8 +59,14 @@ function Home(){
 
     const card1_style = {
         position: 'absolute',
-        top: isFixed ? '1100px' : `${Math.min(scrollPos * 0.4 + 100, 500)}px`, 
-        transform: `rotate(${Math.max(0, 20 - scrollPos * 0.5)}deg)`,
+        top: isFixed ? '1300px' : `${Math.min(scrollPos * 0.4 + 100, 500)}px`, 
+        transform: `
+        rotate(${Math.max(-20, -20 - scrollPos * 0.5)}deg) 
+        scaleX(${Math.max(0.85, 1 - scrollPos * 0.001)}) 
+        scaleY(${Math.max(0.85, 1 - scrollPos * 0.001)})
+        translateX(${Math.min(scrollPos * -0.2, 100)}px)
+        
+        `,
         transition: 'transform 0.2s ease-out, top 0.2s ease-out',
 
     };
@@ -67,7 +75,13 @@ function Home(){
 
         position: 'absolute',
         top: isFixed ? '1200px' : `${Math.min(scrollPos * 0.4 + 100, 300)}px`, 
-        transform: `rotate(${Math.max(0, -10 - scrollPos * 0.1)}deg)`,
+        transform: `
+        rotate(${Math.max(0, -10 - scrollPos * 0.1)}deg)
+        scaleX(${Math.max(0.7, 1 - scrollPos * 0.001)}) 
+        scaleY(${Math.max(0.7, 1 - scrollPos * 0.001)})
+        translateX(${Math.min(scrollPos * -0.3, 200)}px)
+        
+        `,
         transition: 'transform 0.2s ease-out, top 0.2s ease-out',
 
     };
@@ -76,7 +90,27 @@ function Home(){
 
         position: 'absolute',
         top: isFixed ? '1300px' : `${Math.min(scrollPos * 0.4 + 100, 300)}px`, 
-        transform: `rotate(${Math.max(0, 10 - scrollPos * 0.1)}deg)`,
+        transform: `
+        rotate(${Math.max(-15, -12 - scrollPos * 0.1)}deg)
+        scaleX(${Math.max(0.7, 1 - scrollPos * 0.001)}) 
+        scaleY(${Math.max(0.7, 1 - scrollPos * 0.001)})
+        translateX(${Math.min((scrollPos -300) * -0.4, 100)}px)
+        `,
+        transition: 'transform 0.2s ease-out, top 0.2s ease-out',
+
+    };
+
+    const card4_style = {
+
+        position: 'absolute',
+        top: isFixed ? '1300px' : `${Math.min(scrollPos * 0.4 + 100, 300)}px`, 
+        transform: `
+        rotate(${Math.max(5, 10 - scrollPos * 0.1)}deg)
+        scaleX(${Math.max(0.9, 1 - scrollPos * 0.001)}) 
+        scaleY(${Math.max(0.9, 1 - scrollPos * 0.001)})
+        translateX(${Math.min(scrollPos * -0.35, 500)}px)
+        
+        `,
         transition: 'transform 0.2s ease-out, top 0.2s ease-out',
 
     };
@@ -122,7 +156,7 @@ function Home(){
                     <input
                         className={styles.form_name}
                         type="text"
-                        placeholder="  ▸ Name"
+                        placeholder="👤  Name"
                         value={name}
                         onChange={(e) => setName(e.target.value)}
                         required
@@ -130,12 +164,12 @@ function Home(){
                     <input
                         className={styles.form_email}
                         type="email"
-                        placeholder="  ▸ E-mail"
+                        placeholder="✉  E-mail"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         required
                     />
-                    <button className={styles.submit_btn} type="submit"> Join the waitlist </button>
+                    <button className={styles.submit_btn} type="submit"> Join the waitlist  → </button>
                 </form>
 
 
@@ -145,6 +179,28 @@ function Home(){
                 <Image src={card1} alt="card1" className={styles.card1_} style={card1_style}/>
                 <Image src={card2} alt="card2" className={styles.card2_} style={card2_style} />
                 <Image src={card3} alt="card3" className={styles.card3_} style={card3_style} />
+                <Image src={card4} alt="card4" className={styles.card4_} style={card4_style} />
+            </div>
+
+            <div className={styles.info_div}>
+                <div className={styles.info1}>
+                    <h1>Capture Moments of Kindness</h1>
+                    <h2>Share the impact of your help through photos that inspire others</h2>
+                </div>
+                <div className={styles.info2}>
+                    <h1>Build a Community of Care</h1>
+                    <h2>Post your experiences and connect with people making a difference</h2>
+                </div>
+                <div className={styles.info3}>
+                    <h1>Inspire Through Your Actions</h1>
+                    <h2>Your photos can motivate others to take that first step toward helping</h2>
+                </div>
+            </div>
+
+            
+                
+            <div className={styles.bottom_img_div}>
+                <Image src={bottom_img} alt="bottom_img" className={styles.bottom_img}/>
             </div>
 
             
