@@ -4,6 +4,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:wght@300&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Vinyl&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:wght@300&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Vinyl&display=swap');
 
+@font-face{
+    font-family: NexaExtraLight;
+    src: url("Nexa-ExtraLight.ttf");
+}
+
+@font-face{
+    font-family: NexaHeavy;
+    src: url("Nexa-Heavy.ttf");
+}
 
 .container{
     height: auto;
@@ -19,7 +28,7 @@
 }
 
 .name{
-    font-family: "Archivo Black", sans-serif;
+    font-family: "NexaHeavy";
   font-weight: 400;
   font-style: normal;
   color: #ffffff;
@@ -141,7 +150,7 @@
 
   
 .form_title{
-    font-family: "Archivo Black", sans-serif;
+    font-family: "NexaHeavy";
   font-weight: 400;
   font-style: normal;
   color: #ffffff;
@@ -154,15 +163,15 @@
 
 
 .form_subtitle{
-    font-family: "Archivo Black", sans-serif;
+    font-family: "NexaHeavy";
   font-weight: 400;
   font-style: normal;
   color: #ffffff;
-  margin-top: 60px;
+  margin-top: 35px;
   font-size: 25px;
   width: 900px;
   text-align: center;
-  margin-bottom: 0;
+  margin-bottom: 30px;
 }
 
 
@@ -183,11 +192,15 @@
     border-width: 2px;
     border-style: solid;
     box-shadow: 3px 3px 1px  rgb(255, 255, 255);
-    padding-left: 20px;
+    padding-left: 50px;
     font-family: "Roboto", sans-serif;
     font-weight: 500;
     font-style: normal;
     font-size: 15px;
+    background-image: url("../images/name-icon.png");
+    background-repeat: no-repeat;
+    background-position: calc(100% - 410px) ;
+    background-size: 15px;
 }
 
 .form_email{
@@ -200,11 +213,16 @@
     border-width: 2px;
     border-style: solid;
     box-shadow: 3px 3px 1px  rgb(255, 255, 255);
-    padding-left: 20px;
+    padding-left: 50px;
     font-family: "Roboto", sans-serif;
     font-weight: 500;
     font-style: normal;
     font-size: 15px;
+
+    background-image: url("../images/email-icon.png");
+    background-repeat: no-repeat;
+    background-position: calc(100% - 410px) ;
+    background-size: 15px;
 }
 
 .submit_btn{
@@ -220,7 +238,8 @@
     background-color: #ffe137;
     cursor: pointer; 
     transition: box-shadow 0.5s ease-in-out;
-    font-family: "Roboto", sans-serif;
+    /*font-family: "Roboto", sans-serif;*/
+    font-family: "NexaHeavy";
     font-weight: 500;
     font-style: normal;
     font-size: 18px;
@@ -236,7 +255,7 @@
     display: flex;
     flex-direction: column;
     margin-left: 900px;
-    margin-top: 150px;
+    margin-top: 120px;
     height: 800px;
 }
 
@@ -302,6 +321,10 @@
         margin-top: 5px;
         height: 180px;
     }
+
+    .form_subtitle{
+        margin-top: 35px;
+    }
 }
 
 @media (max-width: 1200px) {
@@ -309,6 +332,10 @@
     .form_texts_div{
         margin-top: 5px;
         height: 180px;
+    }
+
+    .form_subtitle{
+        margin-top: 35px;
     }
     
     .card1_{
@@ -348,6 +375,10 @@
         margin-top: 5px;
         height: 180px;
     }
+
+    .form_subtitle{
+        margin-top: 35px;
+    }
 }
 
 @media (max-width: 1000px) {
@@ -357,8 +388,13 @@
         height: 190px;
     }
 
+    .form_subtitle{
+        margin-top: 35px;
+    }
+
     .info_div{
         margin-top: 800px;
+        margin-bottom: 100px;
         align-items: center;
         justify-content: center;
         margin-left:0px;
@@ -391,8 +427,12 @@
         height: 180px;
     }
 
+    .form_subtitle{
+        margin-top: 30px;
+    }
+
     .cards_div{
-        margin-top: 300px;
+        margin-top: 50px;
     }
 
     .card1_{
@@ -416,7 +456,7 @@
     }
 
     .info_div{
-        margin-top: 400px;
+        margin-top: 450px;
     }
 
 }
@@ -430,7 +470,7 @@
 
 
     .info_div{
-        margin-top: 400px;
+        margin-top: 250px;
          
     }
 
@@ -464,7 +504,13 @@
 
     .form_subtitle{
         font-size: 25px;
+        margin-top: 40px;
     }
+
+    .bottom_img{
+        height: 70px;
+    }
+
     
 
 }
@@ -477,7 +523,7 @@
     }
 
     .space_between{
-        height: 600px;
+        height: 400px;
     }
 
 
@@ -541,7 +587,8 @@
     }
 
     .info_div{
-        margin-top: 300px;
+        margin-top: 10px;
+        margin-bottom: 100px;
     }
 
     .form_title{
@@ -550,8 +597,13 @@
 
     .form_subtitle{
         font-size: 20px;
-        
+        margin-top: 30px;
     }
+
+    .bottom_img{
+        height: 60px;
+    }
+
     
 }
 
@@ -592,15 +644,27 @@
 
     .form_subtitle{
         font-size: 17px;
+        margin-top:30px;
     }
 
     .form_name, .form_email, .submit_btn{
         width: 300px;
     }
 
-    .space_between{
-        height: 500px;
+    .form_name, .form_email{
+    background-position: calc(100% - 310px) ;
+
     }
+
+
+    .space_between{
+        height: 420px;
+    }
+
+    .bottom_img{
+        height: 50px;
+    }
+
 
 
    
@@ -613,9 +677,13 @@
         height: 1px;
     }
 
+    .form_name, .form_email{
+        background-position: calc(100% - 260px) ;
+    }
+
 
     .space_between{
-        height: 500px;
+        height: 400px;
     }
 
     .form_title{
@@ -652,6 +720,10 @@
         left: 100px;
     }
 
+    .bottom_img{
+        height: 50px;
+    }
+
     
 }
 
@@ -660,10 +732,6 @@
     .form_texts_div{
         margin-top: 130px;
         height: 1px;
-    }
-
-    .space_between{
-        height: 500px;
     }
 
     .form_title{
@@ -676,6 +744,10 @@
 
     .form_name, .form_email, .submit_btn{
         width: 240px;
+    }
+
+    .form_name, .form_email{
+        background-position: calc(100% - 250px) ;
     }
 
     .card1_{

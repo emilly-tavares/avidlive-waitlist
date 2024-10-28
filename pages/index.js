@@ -158,7 +158,7 @@ function Home(){
                     <input
                         className={styles.form_name}
                         type="text"
-                        placeholder="👤 Full Name"
+                        placeholder="Full Name"
                         value={name}
                         onChange={(e) => setName(e.target.value)}
                         required
@@ -166,7 +166,7 @@ function Home(){
                     <input
                         className={styles.form_email}
                         type="email"
-                        placeholder="✉  E-mail"
+                        placeholder="E-mail"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         required
