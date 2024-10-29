@@ -199,7 +199,7 @@
     font-size: 15px;
     background-image: url("../images/name-icon.png");
     background-repeat: no-repeat;
-    background-position: calc(100% - 410px) ;
+    background-position: calc(100% - 420px) ;
     background-size: 15px;
 }
 
@@ -221,7 +221,7 @@
 
     background-image: url("../images/email-icon.png");
     background-repeat: no-repeat;
-    background-position: calc(100% - 410px) ;
+    background-position: calc(100% - 420px) ;
     background-size: 15px;
 }
 
@@ -652,7 +652,7 @@
     }
 
     .form_name, .form_email{
-    background-position: calc(100% - 310px) ;
+    background-position: calc(100% - 320px) ;
 
     }
 
@@ -678,7 +678,7 @@
     }
 
     .form_name, .form_email{
-        background-position: calc(100% - 260px) ;
+        background-position: calc(100% - 270px) ;
     }
 
 
@@ -747,7 +747,7 @@
     }
 
     .form_name, .form_email{
-        background-position: calc(100% - 250px) ;
+        background-position: calc(100% - 260px) ;
     }
 
     .card1_{
