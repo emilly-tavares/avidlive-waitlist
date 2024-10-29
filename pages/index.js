@@ -26,10 +26,10 @@ function Home(){
 
         try {
             await axios.post('/api/submit', { name, email });
-            alert('Dados enviados com sucesso!');
+            alert('Good job! You’ll receive our news soon!');
         } catch (error) {
             console.error('Erro ao enviar dados:', error);
-            alert('Houve um erro ao enviar os dados.');
+            alert('There was an error sending the data. Try again');
         }
     };
 
