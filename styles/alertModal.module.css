@@ -1,0 +1,61 @@
+@font-face{
+    font-family: NexaExtraLight;
+    src: url("Nexa-ExtraLight.ttf");
+}
+
+@font-face{
+    font-family: NexaHeavy;
+    src: url("Nexa-Heavy.ttf");
+}
+
+.alert_container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.alert_div{
+    background: #3fef6b;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 24px;
+    font-family: "NexaHeavy";
+    font-weight: 400;
+    font-style: normal;
+}
+
+.alert_text{
+    margin-bottom: 20px;
+    color: black;
+}
+
+.alert_button{
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: "NexaHeavy";
+    font-weight: 400;
+    font-style: normal;
+    border-radius: 10px;
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+    box-shadow: 3px 3px 1px  rgb(0, 0, 0);
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+.alert_button:hover{
+    box-shadow: 1px 1px 1px; 
+}

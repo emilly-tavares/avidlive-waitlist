@@ -11,6 +11,7 @@ import card3 from '../images/card3.png';
 import card4 from '../images/card4.png';
 import Bubbles from '../components/bubbles.js';
 import bottom_img from '../images/bottom-img.png';
+import AlertModal from '../components/AlertModal.js';
 
 function Home(){
 
@@ -18,43 +19,86 @@ function Home(){
     const [email, setEmail] = useState('');
     const [scrollPos, setScrollPos] = useState(0);
     const [isFixed, setIsFixed] = useState(false); 
+    const [isLoading, setIsLoading] = useState(false);
+    const [alertMessage, setAlertMessage] = useState('');
+    const [isFormVisible, setIsFormVisible] = useState(false);
+
+    const formRef = useRef(null);
 
     const cardsRef = useRef(null);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        setIsLoading(true);
 
         try {
             await axios.post('/api/submit', { name, email });
-            alert('Good job! You’ll receive our news soon!');
+            setAlertMessage('Good job! You’ll receive our news soon!');
         } catch (error) {
             console.error('Erro ao enviar dados:', error);
-            alert('There was an error sending the data. Try again');
+            setAlertMessage('There was an error sending the data. Try again');
+        } finally {
+            setIsLoading(false); 
         }
     };
 
+    const closeAlert = () => {
+        setAlertMessage('');
+    };
+
     useEffect(() => {
-        if (cardsRef.current) { 
 
-            const handleScroll = () => {
-                const scrollY = window.scrollY;
-                setScrollPos(scrollY);
+        const observer = new IntersectionObserver(
 
-                if (scrollY > 200) { 
-                    setIsFixed(true);
-                } else {
-                    setIsFixed(false);
-                }
-        
+            (entries) => {
+                entries.forEach(entry =>{
+                    if (entry.isIntersecting){
+                        setIsFormVisible(true);
+                        observer.disconnect();
+                    }
+                });
+            },
 
-            };
-    
-            window.addEventListener('scroll', handleScroll);
-            return () => window.removeEventListener('scroll', handleScroll);
+            {threshold: 0.2}
+
+        );
+
+        if (formRef.current){
+            observer.observe(formRef.current);
 
             
+        };
+
+        const handleScroll = () => {
+            const scrollY = window.scrollY;
+            setScrollPos(scrollY);
+
+            if (scrollY > 200) { 
+                setIsFixed(true);
+            } else {
+                setIsFixed(false);
+            }
+    
+
+        };
+        
+
+        
+        if (cardsRef.current) { 
+
+            window.addEventListener('scroll', handleScroll);
 
         }
+
+        return () => {
+            if (formRef.current) {
+                observer.unobserve(formRef.current);
+            }
+
+            window.removeEventListener('scroll', handleScroll);
+        };
+
+
     }, []);
 
     const card1_style = {
@@ -122,6 +166,16 @@ function Home(){
 
             <Bubbles />
 
+            {isLoading && (
+                <div className={styles.loadingOverlay}>
+                    <div className={styles.loader}>Carregando...</div>
+                </div>
+            )}
+
+            {alertMessage &&(
+                <AlertModal message={alertMessage} onClose={closeAlert}/>
+            )}
+
             <div className={styles.head}>
 
                 <div className={styles.head_div_1}>
@@ -147,14 +201,14 @@ function Home(){
             <div className={styles.space_between}>
             </div>
 
-            <div className={styles.form_div}>
+            <div className={`${styles.form_div} ${isFormVisible ? styles.visible: ''}`} ref={formRef} >
                 <div className={styles.form_texts_div}>
                     <h1 className={styles.form_title}> Skip the FOMO <br></br> GET ON THE LIST! </h1>
                     <h3 className={styles.form_subtitle}> YOUR FEED’S NEVER SEEN THIS BEFORE. <br></br> DROP YOUR EMAIL TO BE PART OF THE NEXT <br></br> BIG THING, NO CAP. </h3>
 
                 </div>
                 
-                <form onSubmit={handleSubmit} className={styles.form}>
+                <form onSubmit={handleSubmit} className={styles.form} >
                     <input
                         className={styles.form_name}
                         type="text"
