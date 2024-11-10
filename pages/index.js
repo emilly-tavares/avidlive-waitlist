@@ -204,7 +204,7 @@ function Home(){
             <div className={`${styles.form_div} ${isFormVisible ? styles.visible: ''}`} ref={formRef} >
                 <div className={styles.form_texts_div}>
                     <h1 className={styles.form_title}> Skip the FOMO <br></br> GET ON THE LIST! </h1>
-                    <h3 className={styles.form_subtitle}> Whatsapp <br></br> (81)98511-2157 <br></br> OLHA AQUII ☝️☝️ KKKKK   </h3>
+                    <h3 className={styles.form_subtitle}> YOUR FEED’S NEVER SEEN THIS BEFORE. <br></br> DROP YOUR EMAIL TO BE PART OF THE NEXT <br></br> BIG THING, NO CAP. </h3>
 
                 </div>
                 
